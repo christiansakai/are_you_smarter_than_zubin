@@ -1,4 +1,4 @@
-# are_you_smarter_than_zubin
+# Are You Smarter Than Zubin?
 
 ## Project setup
 ```

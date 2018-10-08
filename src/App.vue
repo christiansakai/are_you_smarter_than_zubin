@@ -1,28 +1,50 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <Intro 
+      v-if="state === 'start'"
+      v-on:start:click="onStartClick()"
+    />
+    <Game 
+      v-if="state === 'game'"
+      v-on:game:end="onGameEnd()"
+    />
+    <Outro 
+      v-if="state === 'end'"
+      v-on:retry:click="onRetryClick()"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Intro from './Intro';
+import Game from './Game';
+import Outro from './Outro';
 
 export default {
-  name: 'app',
   components: {
-    HelloWorld
-  }
+    Intro,
+    Game,
+    Outro,
+  },
+
+  data() {
+    return {
+      state: 'start',
+    }
+  },
+
+  methods: {
+    onStartClick() {
+      this.state = 'game';
+    },
+
+    onGameEnd() {
+      this.state = 'end';
+    },
+
+    onRetryClick() {
+      this.state = 'start';
+    },
+  },
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
