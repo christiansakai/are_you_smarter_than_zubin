@@ -4,24 +4,16 @@
       min-h-screen
     "
   >
-    <h1 class="
-        text-blue
-        font-mono
-        text-3xl
-        text-center
-        p-4
-        pt-10
-      "
-    >
-      Are You <span class="text-5xl">Smarter</span> Than <span class="text-5xl">Zubin</span>?
-    </h1>
+    <div class="text-center">
+      <img src="zubin.jpg" alt="">
+    </div>
 
     <h1 class="
         text-white
         font-mono
-        text-3xl
+        text-2xl
         text-center
-        p-4
+        p-2
       "
       v-if="win"
     >
@@ -31,9 +23,9 @@
     <h1 class="
         text-black
         font-mono
-        text-3xl
+        text-2xl
         text-center
-        p-4
+        p-2
       "
       v-else
     >
@@ -47,7 +39,7 @@
           text-red
           text-3xl
           cursor-pointer
-          p-4
+          p-2
           border-pink-light
           border-4
           rounded-lg
