@@ -1,5 +1,7 @@
 # Are You Smarter Than Zubin?
 
+[Website](http://areyousmarterthanzubin.com)
+
 ## Project setup
 ```
 npm install
