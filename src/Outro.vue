@@ -5,7 +5,7 @@
     "
   >
     <div class="text-center">
-      <img src="zubin.jpg" alt="">
+      <img src="./assets/zubin.jpg" alt="">
     </div>
 
     <h1 class="
